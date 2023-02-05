@@ -1,25 +1,27 @@
 FILE_PATH = "o.lua"
 
-current_line = 1
-lines = []
+class Scotch:
+    def __init__(self, current_line=1, lines=[]):
+        self.current_line = current_line
+        self.lines = lines
 
-def write_up():
-    global current_line
+    def write_app(self):
+        c = str(input(f"[{self.current_line}]: "))
 
-    c = str(input(f"[{current_line}]: "))
+        if c.lower() != "stop":
+            with open(f"{FILE_PATH}", "w") as f:
+                self.lines.append(c + "\n")
+                f.write("")
+                f.writelines(self.lines)
+                f.close()
 
-    if c.lower() != "stop":
-        with open(f"{FILE_PATH}", "w") as f:
-            lines.append(c + "\n")
-            f.write("")
-            f.writelines(lines)
-            f.close()
+                current_line += 1
+                self.write_up()
+        else:
+            self.lines.clear()
+            self.current_line = 1 # Probably unneeded to be honest.
+            return
 
-            current_line += 1
-            write_up()
-    else:
-        lines.clear()
-        current_line = 1 # Probably unneeded to be honest.
-        return
-
-write_up()
+if __name__ == "__main__":
+    app = Scotch()
+    app.write_app()
