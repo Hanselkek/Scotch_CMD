@@ -1,5 +1,5 @@
 MIN_SIZE = 1
 
-def get_previous(a: list):
-    assert len(a) >= 1, AssertionError
+def set_previous(a: list):
+    assert len(a) >= MIN_SIZE, AssertionError
     a.pop()
