@@ -1,6 +1,7 @@
 # Code Libs
 import util
 import print_out_help
+import psutil_instance
 # Libs
 import os
 import psutil
@@ -58,7 +59,14 @@ class Scotch:
             self.write_app()
         elif c.lower() == "help":
             print_out_help.print_out_help()
-            self.write_app()      
+            self.write_app()
+        elif c.lower() == "spec-usages":
+            memUsage = psutil_instance.get_mem_usage_by_app()
+            print(f"""
+                Memory Usage: {memUsage}
+            """)
+
+            self.write_app()
         else:
             with open(f"{file_path}", "w") as f:
                 lines.append(c + "\n")
