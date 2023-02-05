@@ -8,6 +8,7 @@ Anyways I made this because I am bored. Plus, this is for practice anyways haha.
 ## Features
 # File Changing
 # Reverting Changes
+# Editing lines that are stored on a List/Array
 
 # Libraries Needed
 None.

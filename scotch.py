@@ -38,11 +38,17 @@ class Scotch:
             t_line = int(input("Go to line: "))
             try:
                 if lines[t_line - 1] != None:
-                    self.write_app()
+                    edited_str = str(input("New Content: "))
+                    lines[t_line - 1] = edited_str 
+                    with open(f"{file_path}", "w") as f:
+                        f.write("")
+                        f.writelines(lines)
+                        f.close()
+
+                        self.write_app()
             except:
                 print("Line does not exist on the list. Going back to previous command.")
-                self.write_app()
-                
+                self.write_app()        
         else:
             with open(f"{file_path}", "w") as f:
                 lines.append(c + "\n")
