@@ -27,7 +27,6 @@ class Scotch:
                 current_line -= 1
                 self.write_app()
         elif c.lower() == "set_file_type_path":
-            # TODO add exceptions
             new_file_path = str(input("New file path: "))
             if os.path.exists(new_file_path):
                 file_path = new_file_path
@@ -35,6 +34,8 @@ class Scotch:
             else:
                 print("Unable to open file path. Going back to previous command.")
                 self.write_app()
+        elif c.lower() == "edit_line":
+            assert False, "Feature not implemented yet."
         else:
             with open(f"{file_path}", "w") as f:
                 lines.append(c + "\n")
