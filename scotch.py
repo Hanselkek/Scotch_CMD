@@ -1,5 +1,6 @@
 import util
 import os
+import print_out_help
 
 file_path = "o.lua"
 
@@ -48,7 +49,10 @@ class Scotch:
                         self.write_app()
             except:
                 print("Line does not exist on the list. Going back to previous command.")
-                self.write_app()        
+                self.write_app()
+        elif c.lower() == "help":
+            print_out_help.print_out_help()
+            self.write_app()      
         else:
             with open(f"{file_path}", "w") as f:
                 lines.append(c + "\n")
