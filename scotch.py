@@ -4,7 +4,6 @@ import print_out_help
 import psutil_instance
 # Libs
 import os
-import psutil
 
 file_path = "o.lua"
 
@@ -55,7 +54,7 @@ class Scotch:
                 print("Line does not exist on the list. Going back to previous command.")
                 self.write_app()
         elif c.lower() == "config":
-            print("Feature not implemented")
+            print("Feature not implemented.")
             self.write_app()
         elif c.lower() == "help":
             print_out_help.print_out_help()
