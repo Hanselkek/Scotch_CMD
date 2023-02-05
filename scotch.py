@@ -1,5 +1,5 @@
 import util
-import os.path
+import os
 
 file_path = "o.lua"
 
