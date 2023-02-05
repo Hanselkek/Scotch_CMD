@@ -1,4 +1,5 @@
 import util
+import os.path
 
 file_path = "o.lua"
 
@@ -28,9 +29,12 @@ class Scotch:
         elif c.lower() == "set_file_type_path":
             # TODO add exceptions
             new_file_path = str(input("New file path: "))
-            file_path = new_file_path
-
-            self.write_app()
+            if os.path.exists(new_file_path):
+                file_path = new_file_path
+                self.write_app()
+            else:
+                print("Unable to open file path. Going back to previous command.")
+                self.write_app()
         else:
             with open(f"{file_path}", "w") as f:
                 lines.append(c + "\n")
