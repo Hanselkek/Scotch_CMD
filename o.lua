@@ -1,4 +1,4 @@
-local n1 = 5
-local n2 = 5
--- Funcs
-print(n1 + n2)
+local os = require("os")
+local time = os.time()
+
+print(time - os.time())
