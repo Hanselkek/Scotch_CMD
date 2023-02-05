@@ -1,6 +1,6 @@
 import util
 
-FILE_PATH = "o.lua"
+file_path = "o.lua"
 
 current_line = 1
 lines = []
@@ -16,7 +16,7 @@ class Scotch:
             return
         elif c.lower() == "revert":
             util.get_previous(lines)
-            with open(f"{FILE_PATH}", "w") as f:
+            with open(f"{file_path}", "w") as f:
                 f.write("")
                 f.writelines(lines)
                 f.close()
@@ -24,7 +24,7 @@ class Scotch:
                 current_line -= 1
                 self.write_app()
         else:
-            with open(f"{FILE_PATH}", "w") as f:
+            with open(f"{file_path}", "w") as f:
                 lines.append(c + "\n")
                 f.write("")
                 f.writelines(lines)
