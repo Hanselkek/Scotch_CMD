@@ -1,6 +1,8 @@
+# Code Libs
 import util
-import os
 import print_out_help
+# Libs
+import os
 
 file_path = "o.lua"
 
