@@ -35,7 +35,14 @@ class Scotch:
                 print("Unable to open file path. Going back to previous command.")
                 self.write_app()
         elif c.lower() == "edit_line":
-            assert False, "Feature not implemented yet."
+            t_line = int(input("Go to line: "))
+            try:
+                if lines[t_line - 1] != None:
+                    self.write_app()
+            except:
+                print("Line does not exist on the list. Going back to previous command.")
+                self.write_app()
+                
         else:
             with open(f"{file_path}", "w") as f:
                 lines.append(c + "\n")
