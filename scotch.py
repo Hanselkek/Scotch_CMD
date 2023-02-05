@@ -1,5 +1,4 @@
 import util
-import io
 
 file_path = "o.lua"
 
