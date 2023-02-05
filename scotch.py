@@ -42,7 +42,7 @@ class Scotch:
             try:
                 if lines[t_line - 1] != None:
                     edited_str = str(input("New Content: "))
-                    lines[t_line - 1] = edited_str 
+                    lines[t_line - 1] = edited_str + "\n"
                     with open(f"{file_path}", "w") as f:
                         f.write("")
                         f.writelines(lines)
