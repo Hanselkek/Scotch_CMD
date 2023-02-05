@@ -1,4 +1,4 @@
-# Scotch_Slang
+# Scotch_CMD
 
 Scotch_CMD is a text editor in the command prompt. *much* like nvim, vim etc.. but with less features and made in python.
 and let's be honest, python... is pretty slow.
