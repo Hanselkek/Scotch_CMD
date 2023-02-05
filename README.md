@@ -5,10 +5,10 @@ and let's be honest, python... is pretty slow.
 
 Anyways I made this because I am bored. Plus, this is for practice anyways haha.
 
-## Features
-# File Changing
-# Reverting Changes
-# Editing lines that are stored on a List/Array
+# Features
+[o] File Changing
+[o] Reverting Changes
+[o] Editing lines that are stored on a List/Array
 
 # Libraries Needed
-None.
+[o] OS
