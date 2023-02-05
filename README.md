@@ -10,6 +10,7 @@ Anyways I made this because I am bored. Plus, this is for practice anyways haha.
 - [x] Reverting Changes
 - [x] Editing lines that are stored on a List/Array
 - [ ] Config Command
+- [ ] More Game Changing Commands
 
 # Libraries Needed
 - [x] OS
