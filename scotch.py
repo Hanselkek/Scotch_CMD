@@ -19,6 +19,7 @@ def write_up():
             write_up()
     else:
         lines.clear()
+        current_line = 1 # Probably uneeded to be honest.
         return
 
 write_up()
