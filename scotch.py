@@ -1,3 +1,5 @@
+from util import get_previous
+
 FILE_PATH = "o.lua"
 
 current_line = 1
@@ -8,7 +10,20 @@ class Scotch:
         global current_line
         c = str(input(f"[{current_line}]: "))
 
-        if c.lower() != "stop":
+        if c.lower() == "stop":
+            lines.clear()
+            current_line = 1
+            return
+        elif c.lower() == "revert":
+            get_previous(lines)
+            with open(f"{FILE_PATH}", "w") as f:
+                f.write("")
+                f.writelines(lines)
+                f.close()
+
+                current_line -= 1
+                self.write_app()
+        else:
             with open(f"{FILE_PATH}", "w") as f:
                 lines.append(c + "\n")
                 f.write("")
@@ -17,10 +32,6 @@ class Scotch:
 
                 current_line += 1
                 self.write_app()
-        else:
-            lines.clear()
-            current_line = 1 # Probably unneeded to be honest.
-            return
 
 if __name__ == "__main__":
     app = Scotch()
