@@ -52,6 +52,9 @@ class Scotch:
             except:
                 print("Line does not exist on the list. Going back to previous command.")
                 self.write_app()
+        elif c.lower() == "config":
+            print("Feature not implemented")
+            self.write_app()
         elif c.lower() == "help":
             print_out_help.print_out_help()
             self.write_app()      
