@@ -9,6 +9,7 @@ Anyways I made this because I am bored. Plus, this is for practice anyways haha.
 - [x] File Changing
 - [x] Reverting Changes
 - [x] Editing lines that are stored on a List/Array
+- [x] View current spec usage
 - [ ] Config Command
 - [ ] More Game Changing Commands
 
