@@ -14,3 +14,4 @@ Anyways I made this because I am bored. Plus, this is for practice anyways haha.
 
 # Libraries Needed
 - [x] OS
+- [x] psutil (this is a default python library. but on some devices psutil isn't pre-installed somehow.)

@@ -3,6 +3,7 @@ import util
 import print_out_help
 # Libs
 import os
+import psutil
 
 file_path = "o.lua"
 
