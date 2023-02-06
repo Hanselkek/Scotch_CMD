@@ -6,7 +6,7 @@ def print_out_help(lines: list):
         set_file_type_path - inputs a new file path.
         edit_line - prompts the user to change the current line.
         spec-usage - using this command will show the current spec usage of Scotch.
-        config - Not added.
+        del_line - Deletes a specific line.
         ------------------------------------------------
         Lines: {str(len(lines))}
     """)

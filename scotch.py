@@ -53,6 +53,23 @@ class Scotch:
             except:
                 print("Line does not exist on the list. Going back to previous command.")
                 self.write_app()
+        elif c.lower() == "del_line":
+            line_to_delete = int(input("Line: ")) - 1
+            try:
+                if lines[line_to_delete] != None:
+                    line = lines[line_to_delete]
+                    lines.remove(line)
+                    current_line -= 1
+
+                    with open(f"{file_path}", "w") as f:
+                        f.write("")
+                        f.writelines(lines)
+                        f.close()
+
+                        self.write_app()
+            except:
+                print("Unable to go to line. Either the line does not exist or this is a bug")
+                self.write_app()
         elif c.lower() == "help":
             print_out_help.print_out_help(lines)
             self.write_app()
