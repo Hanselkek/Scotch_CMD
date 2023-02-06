@@ -53,7 +53,7 @@ class Scotch:
                 print("Line does not exist on the list. Going back to previous command.")
                 self.write_app()
         elif c.lower() == "help":
-            print_out_help.print_out_help()
+            print_out_help.print_out_help(lines)
             self.write_app()
         elif c.lower() == "spec-usages":
             memUsage = psutil_instance.get_mem_usage_by_app()
