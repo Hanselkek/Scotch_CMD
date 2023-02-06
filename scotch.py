@@ -13,6 +13,7 @@ class Scotch:
     def write_app(self):
         global current_line
         global file_path
+        global lines
 
         c = str(input(f"[{current_line}]: "))
 
