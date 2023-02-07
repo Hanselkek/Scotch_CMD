@@ -43,7 +43,6 @@ class Scotch:
             if type(t_line) != "int":
                 print("edit_line only accepts intergers.")
                 self.write_app()
-
                 return
             try:
                 if lines[t_line - 1] != None:
