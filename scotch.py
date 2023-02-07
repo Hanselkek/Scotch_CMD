@@ -54,8 +54,7 @@ class Scotch:
                 print("Line does not exist on the list. Going back to previous command.")
                 self.write_app()
         elif c.lower() == "del_line":
-            #line_to_delete = int(input("Line: ")) - 1
-            line_to_delete = int(input("Line: "))
+            line_to_delete = int(input("Line: ")) - 1
             try:
                 if lines[line_to_delete] != None:
                     line = lines[line_to_delete]
