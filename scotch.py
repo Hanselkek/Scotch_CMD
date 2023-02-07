@@ -39,11 +39,7 @@ class Scotch:
                 print("Unable to open file path. Going back to previous command.")
                 self.write_app()
         elif c.lower() == "edit_line":
-            t_line = input("Go to line: ")
-            if type(t_line) != "int":
-                print("edit_line only accepts intergers.")
-                self.write_app()
-                return
+            t_line = int(input("Go to line: "))
             try:
                 if lines[t_line - 1] != None:
                     edited_str = str(input("New Content: "))
@@ -58,7 +54,8 @@ class Scotch:
                 print("Line does not exist on the list. Going back to previous command.")
                 self.write_app()
         elif c.lower() == "del_line":
-            line_to_delete = int(input("Line: ")) - 1
+            #line_to_delete = int(input("Line: ")) - 1
+            line_to_delete = int(input("Line: "))
             try:
                 if lines[line_to_delete] != None:
                     line = lines[line_to_delete]
