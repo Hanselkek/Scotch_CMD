@@ -39,7 +39,12 @@ class Scotch:
                 print("Unable to open file path. Going back to previous command.")
                 self.write_app()
         elif c.lower() == "edit_line":
-            t_line = int(input("Go to line: "))
+            t_line = input("Go to line: ")
+            if type(t_line) != "int":
+                print("edit_line only accepts intergers.")
+                self.write_app()
+
+                return
             try:
                 if lines[t_line - 1] != None:
                     edited_str = str(input("New Content: "))
